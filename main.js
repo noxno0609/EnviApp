@@ -1,10 +1,11 @@
-import React, {Component} from 'react';
-import Login from './source/component/login';
+import React from 'react';
 
-export default class Main extends Component {
-    render() {
-        return (
-            <Login />
-        )
-    }
-}
+import {StackNavigator} from 'react-navigation';
+import login from "./source/component/login";
+
+
+const Navigation = StackNavigator({
+    Login: {screen: login},
+});
+
+export default Navigation
